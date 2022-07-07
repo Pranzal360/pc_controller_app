@@ -133,7 +133,7 @@ class shutDown(MDApp):
             serverSays = self.client.recv(2048).decode(FORMAT)
             
             # adding the message to the log tab !
-            self.root.ids.label.add_widget(MDLabel(text=f"[SERVER]: {serverSays}",size_hint_y= None))
+            self.root.ids.label.add_widget(MDLabel(text=f"[SERVER]: {serverSays}",size_hint_y= .1))
 
             # check if the message == disc -> for disconnection
             if msg.lower() == "disc":
